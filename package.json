@@ -8,7 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^34.0.1",
+    "expo": "^34.0.4",
     "expo-constants": "~6.0.0",
     "expo-permissions": "~6.0.0",
     "expo-server-sdk": "^3.3.0",
