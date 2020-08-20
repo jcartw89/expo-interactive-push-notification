@@ -7,18 +7,20 @@ import { Notifications } from "expo";
 Notifications.createCategoryAsync("A_OR_B", [
   {
     actionId: "a",
-    buttonTitle: "A"
+    buttonTitle: "A",
   },
   {
     actionId: "b",
-    buttonTitle: "B"
-  }
+    buttonTitle: "B",
+  },
 ]);
+
+// Ex. token: `ExponentPushToken[MuUIsvLAyUcBoLne6F2EmX]`
 
 export default class App extends React.Component {
   state = {
     token: null,
-    notification: null
+    notification: null,
   };
 
   registerForPushNotificationsAsync = async () => {
@@ -47,7 +49,7 @@ export default class App extends React.Component {
     // Get the Expo push token
     this.registerForPushNotificationsAsync();
     // Add a listener
-    Notifications.addListener(notification => {
+    Notifications.addListener((notification) => {
       this.setState({ notification });
     });
   }
@@ -76,18 +78,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingTop: Constants.statusBarHeight,
     backgroundColor: "#ecf0f1",
-    padding: 8
+    padding: 8,
   },
   paragraph: {
     margin: 10,
     fontSize: 14,
     fontWeight: "normal",
-    textAlign: "center"
+    textAlign: "center",
   },
   heading: {
     margin: 10,
     fontSize: 18,
     fontWeight: "bold",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
